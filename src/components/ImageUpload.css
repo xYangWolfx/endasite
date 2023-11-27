@@ -1,0 +1,8 @@
+.upload-button {
+  background-color: #4caf50; /* Green background color */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding for better appearance */
+  border: none; /* No border */
+  border-radius: 4px; /* Optional: Add some border-radius for rounded corners */
+  cursor: pointer; /* Add a pointer cursor on hover */
+}

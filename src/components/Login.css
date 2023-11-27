@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+}
+
+.heading {
+  margin-bottom: 0.5rem;
+}
+
+.username, .password {
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  margin-bottom: 0.25rem;
+}
+
+.input {
+  padding: 0.25rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 0.5rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 0.5rem;
+  color: red;
+}
