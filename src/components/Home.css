@@ -1,9 +1,41 @@
-/*.page-background {
-    background-image: url('./images/background.jpeg'); /* Replace with the actual path to your image file 
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-  }*/
+.home-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event-block,
+.credentials-block {
+  width: 48%; /* Adjust the width as needed */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.event-block h2,
+.credentials-block h2 {
+  margin-bottom: 10px;
+}
+
+.event-info,
+.credentials-info {
+  margin-top: 10px;
+}
+
+.event-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credentials-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credentials-info li {
+  margin-bottom: 5px;
+}
+
+.map-block {
+  width: 50%; /* Adjust the width for the map block */
+}
