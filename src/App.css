@@ -3,10 +3,9 @@
 }
 
 main {
-  background-image: url('./components/images/background.jpeg'); /* Replace with the actual path to your image file */
+  background-image: url('./components/images/background3.jpg'); /* Replace with the actual path to your image file */
   background-size: contain; /* Ensures the background image covers the entire element */
   background-position: center; /* Centers the background image */
-  background-repeat: no-repeat;
   min-height: 100vh; /* Ensure the background covers the entire viewport height */
   margin: 0;
   padding: 0;
