@@ -21,7 +21,7 @@ function ImageUpload({ onUpload }) {
 
     try {
       const response = await axios.post(
-        "http://localhost:3001/uploadEndapendentes",
+        "https://api.enda.aeisec.pt/uploadEndapendentes",
         formData
       );
       console.log("Upload successful!", response.data);
