@@ -68,7 +68,7 @@ function Plenarios({ userInfo }) {
 
       try {
         const response = await axios.post(
-          "http://localhost:3001/uploadMocoes",
+          "https://api.enda.aeisec.pt/uploadMocoes",
           formData,
           {
             headers: {
@@ -96,7 +96,7 @@ function Plenarios({ userInfo }) {
   useEffect(() => {
     // Fetch all files for all plenarios
     axios
-      .get("http://localhost:3001/listAllFiles")
+      .get("https://api.enda.aeisec.pt/listAllFiles")
       .then((response) => {
         setAllFiles(response.data);
       })
@@ -149,7 +149,7 @@ function Plenarios({ userInfo }) {
                           className="action-button"
                           onClick={() =>
                             window.open(
-                              `http://localhost:3001/plenarios/${plenarioKey}/${file.filename}`,
+                              `https://api.enda.aeisec.pt/plenarios/${plenarioKey}/${file.filename}`,
                               "_blank"
                             )
                           }
@@ -160,7 +160,7 @@ function Plenarios({ userInfo }) {
                           className="action-button"
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = `http://localhost:3001/plenarios/${plenarioKey}/${file.filename}`;
+                            link.href = `https://api.enda.aeisec.pt/plenarios/${plenarioKey}/${file.filename}`;
                             link.download = file.filename;
                             link.click();
                           }}
