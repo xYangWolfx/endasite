@@ -10,7 +10,7 @@ function ImageGallery({ onUpload }) {
   const fetchImages = () => {
     // Make an HTTP GET request to fetch the list of images from your server
     axios
-      .get("http://localhost:3001/listEndapendentes")
+      .get("https://api.enda.aeisec.pt/listEndapendentes")
       .then((response) => {
         // Update the state with the fetched images
         setImages(response.data);
@@ -60,7 +60,7 @@ function ImageGallery({ onUpload }) {
             onClick={() => openPreview(image)}
           >
             <img
-              src={`http://localhost:3001/endapendentes/${image.filename}`}
+              src={`https://api.enda.aeisec.pt/endapendentes/${image.filename}`}
               alt={`Image ${index}`}
               style={{
                 maxWidth: "100%",
@@ -77,7 +77,7 @@ function ImageGallery({ onUpload }) {
             <button onClick={closeImagePreview}>Close</button>
             <br/>
             <img
-              src={`http://localhost:3001/endapendentes/${selectedImage.filename}`}
+              src={`https://api.enda.aeisec.pt/endapendentes/${selectedImage.filename}`}
               alt={`Image Preview`}
             />
           </div>
