@@ -1,0 +1,7 @@
+footer {
+    display: flex;
+    justify-content: space-between; /* Align items to the start and end */
+    align-items: center; /* Center items vertically */
+    background-color: black;
+    padding: 1rem;
+  }

@@ -30,7 +30,6 @@ function Header({ loggedInUser, handleLogout }) {
               <li>
                 <Link to="/endapendentes">Endapendentes</Link>
               </li>
-              <li></li>
               <li>
                 {loggedInUser.userType === "admin" && (
                   <div className="user-info">

@@ -15,29 +15,83 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>ENDA COIMBRA 2023</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
+<style>
+  body {
+    padding: 50px;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    /* background-image: linear-gradient(30deg, #b2b3bd 12%, transparent 12.5%, transparent 87%, #b2b3bd 87.5%, #b2b3bd), linear-gradient(150deg, #b2b3bd 12%, transparent 12.5%, transparent 87%, #b2b3bd 87.5%, #b2b3bd), linear-gradient(30deg, #b2b3bd 12%, transparent 12.5%, transparent 87%, #b2b3bd 87.5%, #b2b3bd), linear-gradient(150deg, #b2b3bd 12%, transparent 12.5%, transparent 87%, #b2b3bd 87.5%, #b2b3bd), linear-gradient(60deg, #b2b3bd77 25%, transparent 25.5%, transparent 75%, #b2b3bd77 75%, #b2b3bd77), linear-gradient(60deg, #b2b3bd77 25%, transparent 25.5%, transparent 75%, #b2b3bd77 75%, #b2b3bd77); */
+    background-image: url('./background3.jpg');
+    /* background-size: 20px 35px; */
+    background-size: contain;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+  }
+
+  #root {
+    border: 4px solid black;
+    background-color: #fafafa;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='800' preserveAspectRatio='none' viewBox='0 0 1440 800'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1098%26quot%3b)' fill='none'%3e%3crect width='1440' height='800' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M613.6748476615439 556.9555211282478L467.07842190517704 382.24870407162723 438.96803060492334 703.5519468846147z' fill='rgba(0%2c 0%2c 0%2c 0.04)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M986.6018927639004 503.6875345753046L1152.4134092110387 400.0769997538785 882.9913579424743 337.8760181281664z' fill='rgba(0%2c 0%2c 0%2c 0.04)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M172.51801082445627 424.3279890252995L110.91865651537717 193.5565730409809-39.274869435766675 338.5967751006955z' fill='rgba(0%2c 0%2c 0%2c 0.04)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M305.3583196609313 312.65032638353904L81.12927806949347 308.52263011877204 173.16666933523473 481.6197876736869z' fill='rgba(0%2c 0%2c 0%2c 0.04)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M460.74888339134094 190.00690386486738L555.9703738447843 186.68169614608198 503.3718170398845 45.51206432530972z' fill='rgba(0%2c 0%2c 0%2c 0.04)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1471.7367401628742 523.800717775453L1204.0104542480622 532.8944741162661 1324.6168422647831 733.6172111328998z' fill='rgba(0%2c 0%2c 0%2c 0.04)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1098'%3e%3crect width='1440' height='800' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    background-size: cover;
+  }
+
+  header {
+    border-bottom: 4px solid black;
+    background: black;
+    padding: 30px 20px;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  .event-info {
+    max-width: 420px;
+    margin: 0 auto;
+    line-height: 1.4rem;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .event-info li,
+  .credentials-info li {
+    margin-bottom: 20px;
+  }
+
+  .event-info li span {
+    text-transform: uppercase;
+    display: block;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  .event-info h2 {
+    margin: 30px 0 0;
+    font-size: 3rem;
+  }
+
+  .event-info h3 {
+    margin: 15px 0 40px;
+    font-size: 2rem;
+  }
+
+  .credentials-info h3 {
+    margin: 0 0 40px;
+  }
+
+  .credentials-info {
+    margin: 60px 0 30px;
+  }
+
+  main+div {
+    border-top: 4px solid black;
+  }
+</style>
