@@ -33,15 +33,15 @@ function Header({ loggedInUser, handleLogout }) {
               <li>
                 {loggedInUser.userType === "admin" && (
                   <div className="user-info">
-                    <span style={{ color: "white" }}>Logged in as Admin</span>
-                    <br />
+                    {/* <span style={{ color: "white" }}>Logged in as Admin</span>
+                    <br /> */}
                     <button onClick={handleLogoutClick}>Logout</button>
                   </div>
                 )}
                 {loggedInUser.userType === "user" && (
                   <div className="user-info">
-                    <span style={{ color: "white" }}>Logged in as User</span>
-                    <br />
+                    {/* <span style={{ color: "white" }}>Logged in as User</span>
+                    <br /> */}
                     <button onClick={handleLogout}>Logout</button>
                   </div>
                 )}

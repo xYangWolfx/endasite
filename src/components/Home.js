@@ -8,8 +8,9 @@ function Home({ loggedInUser, handleLogout }) {
   return (
     <div className="home-container">
       <div className="event-block">
-        <h2>ENDA Coimbra - dias 2 e 3 de dezembro</h2>
         <div className="event-info">
+          <h2>ENDA Coimbra</h2>
+          <h3>– 2 e 3 de dezembro –</h3>
           <p>
             O Encontro Nacional de Direções Associativas terá início pelas 10h00
             de dia 2 de dezembro, no Auditório António Arnaut na Escola Superior

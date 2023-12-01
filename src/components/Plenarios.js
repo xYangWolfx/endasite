@@ -113,7 +113,7 @@ function Plenarios({ userInfo }) {
           <li className="plenario-item" key={plenarioKey}>
             <div>
               <strong>{plenarioLabel}</strong>
-              {userInfo && userInfo.userType === "admin" && (
+              {/* {userInfo && userInfo.userType === "admin" && (
                 <button
                   className="add-file-button"
                   onClick={() => handleAddFileClick(plenarioKey)}
@@ -137,7 +137,7 @@ function Plenarios({ userInfo }) {
                     </button>
                   </div>
                 </div>
-              )}
+              )} */}
               <div>
                 <ul className="file-list">
                   {allFiles
@@ -156,13 +156,27 @@ function Plenarios({ userInfo }) {
                         >
                           Open
                         </button>
-                        <button
+                        {/* <button
                           className="action-button"
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = `https://api.enda.aeisec.pt/plenarios/${plenarioKey}/${file.filename}`;
                             link.download = file.filename;
                             link.click();
+                          }}
+                        >
+                          Download
+                        </button> */}
+                        <button
+                          className="action-button"
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = `https://api.enda.aeisec.pt/plenarios/${plenarioKey}/${file.filename}`;
+                            link.download = file.filename;
+                            link.style.display = "none"; // Hide the link
+                            document.body.appendChild(link);
+                            link.click();
+                            document.body.removeChild(link); // Remove the link from the DOM after click
                           }}
                         >
                           Download
