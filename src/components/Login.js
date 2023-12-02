@@ -10,23 +10,12 @@ function Login({ onLogin }) {
   const navigate = useNavigate();
 
   const handleLoginClick = (e) => {
-    const adminCredentials = { username: "admin", password: "admin123" };
     const userCredentials = {
       username: "endacoimbra",
       password: "endacoimbra",
     };
 
     if (
-      username === adminCredentials.username &&
-      password === adminCredentials.password
-    ) {
-      // Clear any previous error and trigger the login as admin
-      setError("");
-      onLogin("admin");
-      navigate("/");
-    }
-    // Check if provided credentials match the regular user
-    else if (
       username === userCredentials.username &&
       password === userCredentials.password
     ) {

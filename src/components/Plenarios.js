@@ -20,79 +20,6 @@ function Plenarios({ userInfo }) {
   const [allFiles, setAllFiles] = useState([]);
   const [rerender, setRerender] = useState(false); // New state variable
 
-  const handleAddFileClick = (plenarioKey) => {
-    setShowUploadSection(true);
-    handlePlenarioChange(plenarioKey);
-  };
-
-  const handleCancelClick = () => {
-    setShowUploadSection(false);
-    setSelectedFile(null); // Clear selected file
-  };
-
-  const handlePlenarioChange = (plenarioKey) => {
-    setSelectedPlenario(plenarioKey);
-  };
-
-  const handleFileChange = (event) => {
-    const selectedFile = event.target.files[0];
-
-    // Check if a file is selected
-    if (!selectedFile) {
-      console.warn("Please select a file.");
-      return;
-    }
-
-    // Check if the selected file is a PDF
-    if (selectedFile.type !== "application/pdf") {
-      console.warn("Please select a PDF file.");
-      // Clear the selected file input
-      event.target.value = null;
-      return;
-    }
-
-    // Update the selected file state
-    setSelectedFile(selectedFile);
-  };
-
-  const handleUpload = async (plenarioKey) => {
-    if (selectedFile) {
-      // TODO: Implement file upload logic here
-      console.log(`nome do ficheiro: ${selectedFile.name}`);
-      console.log(`Uploading file for ${selectedPlenario}:`, selectedFile);
-
-      const formData = new FormData();
-      const plenarioKeyAsString = String(selectedPlenario);
-      formData.append("plenarioKey", plenarioKeyAsString);
-      formData.append("file", selectedFile);
-
-      try {
-        const response = await axios.post(
-          "https://api.enda.aeisec.pt/uploadMocoes",
-          formData,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        );
-        console.log("Upload successful!", response.data);
-
-        // Add logic to handle the response data as needed.
-        setRerender((prevRerender) => !prevRerender);
-      } catch (error) {
-        console.error("Upload failed:", error);
-      }
-
-      // Clear selected file after upload
-      setSelectedFile(null);
-      // Hide the upload section after upload
-      setShowUploadSection(false);
-    } else {
-      console.warn("Please select a file before uploading.");
-    }
-  };
-
   useEffect(() => {
     // Fetch all files for all plenarios
     axios
@@ -113,31 +40,6 @@ function Plenarios({ userInfo }) {
           <li className="plenario-item" key={plenarioKey}>
             <div>
               <strong>{plenarioLabel}</strong>
-              {/* {userInfo && userInfo.userType === "admin" && (
-                <button
-                  className="add-file-button"
-                  onClick={() => handleAddFileClick(plenarioKey)}
-                >
-                  Add New File
-                </button>
-              )}
-              {showUploadSection && selectedPlenario === plenarioKey && (
-                <div>
-                  <input type="file" onChange={handleFileChange} />
-                  <button className="upload-button" onClick={handleUpload}>
-                    Upload File
-                  </button>
-
-                  <div>
-                    <button
-                      className="cancel-button"
-                      onClick={() => handleCancelClick()}
-                    >
-                      Cancel
-                    </button>
-                  </div>
-                </div>
-              )} */}
               <div>
                 <ul className="file-list">
                   {allFiles
@@ -156,27 +58,13 @@ function Plenarios({ userInfo }) {
                         >
                           Open
                         </button>
-                        {/* <button
-                          className="action-button"
-                          onClick={() => {
-                            const link = document.createElement("a");
-                            link.href = `https://api.enda.aeisec.pt/plenarios/${plenarioKey}/${file.filename}`;
-                            link.download = file.filename;
-                            link.click();
-                          }}
-                        >
-                          Download
-                        </button> */}
                         <button
                           className="action-button"
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = `https://api.enda.aeisec.pt/plenarios/${plenarioKey}/${file.filename}`;
                             link.download = file.filename;
-                            link.style.display = "none"; // Hide the link
-                            document.body.appendChild(link);
                             link.click();
-                            document.body.removeChild(link); // Remove the link from the DOM after click
                           }}
                         >
                           Download
