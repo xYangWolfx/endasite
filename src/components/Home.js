@@ -25,8 +25,8 @@ function Home({ loggedInUser, handleLogout }) {
             <li>Plenário A: Plenário Inicial;</li>
             <li>Plenário B: Ação Social e Abandono Escolar;</li>
             <li>Plenário C: Empregabilidade;</li>
-            <li>Plenário D: Internacionalização;</li>
-            <li>Plenário E: Regime Jurídico do Associativismo Jovem;</li>
+            <li>Plenário D: Regime Jurídico do Associativismo Jovem;</li>
+            <li>Plenário E: Internacionalização;</li>
             <li>Plenário F: Medidas Conjuntas;</li>
             <li>Plenário G: Plenário Final.</li>
           </ul>

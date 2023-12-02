@@ -7,8 +7,8 @@ const plenarioNames = {
   plenarioA: "Plenário A: Plenário Inicial",
   plenarioB: "Plenário B: Ação Social e Abandono Escolar",
   plenarioC: "Plenário C: Empregabilidade",
-  plenarioD: "Plenário D: Internacionalização",
-  plenarioE: "Plenário E: Regime Jurídico do Associativismo Jovem",
+  plenarioD: "Plenário D: Regime Jurídico do Associativismo Jovem",
+  plenarioE: "Plenário E: Internacionalização",
   plenarioF: "Plenário F: Medidas Conjuntas",
   plenarioG: "Plenário G: Plenário Final",
 };
