@@ -13,7 +13,8 @@ function ImageGallery({ onUpload }) {
       .get("https://api.enda.aeisec.pt/listEndapendentes")
       .then((response) => {
         // Update the state with the fetched images
-        setImages(response.data);
+        const reversedImages = response.data.reverse();
+        setImages(reversedImages);
       })
       .catch((error) => {
         console.error("Error fetching images:", error);
