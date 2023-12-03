@@ -11,6 +11,7 @@ const plenarioNames = {
   plenarioE: "Plenário E: Internacionalização",
   plenarioF: "Plenário F: Medidas Conjuntas",
   plenarioG: "Plenário G: Plenário Final",
+  regimento: "Regimento ENDA"
 };
 
 function Plenarios({ userInfo }) {
